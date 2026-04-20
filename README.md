@@ -2,7 +2,7 @@
 
 > A curated list of developer tools that don't send your data to a server. No tracking, no ads, no "free tier" backdoors waiting to activate.
 
-Maintained by [Septim Labs](https://septimlabs.vercel.app). Last updated: April 20, 2026.
+Maintained by [Septim Labs](https://septimlabs.vercel.app). Last updated: April 20, 2026 (added Secret Management + AI Coding Tools sections).
 
 **Why this list exists:** In March 2026, the popular [JSON Formatter Chrome extension was caught injecting adware and tracking scripts](https://news.ycombinator.com/item?id=47721946) into user browsers. It's a pattern that keeps repeating with "free" dev tools. This list curates the ones that structurally can't do that — because they run entirely on your machine.
 
@@ -13,6 +13,8 @@ Maintained by [Septim Labs](https://septimlabs.vercel.app). Last updated: April 
 - [Data Formatters](#data-formatters) — JSON, JWT, Base64, etc.
 - [Code Utilities](#code-utilities) — Diff, minify, convert
 - [Generators](#generators) — UUID, hash, password, lorem
+- [Secret Management (Dev)](#secret-management-dev) — API keys, tokens, .env values
+- [AI Coding Tools](#ai-coding-tools) — Claude Code skills, agents, prompts
 - [Web Apps (Client-Side)](#web-apps-client-side) — Zero-server web tools
 - [Self-Hosted](#self-hosted) — Run locally
 - [How to Verify a Tool is Actually Client-Side](#how-to-verify)
@@ -74,11 +76,35 @@ Maintained by [Septim Labs](https://septimlabs.vercel.app). Last updated: April 
 
 ---
 
+## Secret Management (Dev)
+
+Password managers (1Password, Bitwarden) are built for consumer accounts. *Developer* secrets — API keys, auth tokens, Stripe keys, database URLs, .env values — have different shape: they rotate more, they get pasted into terminals, they have 1000x the blast radius. Tools in this section target dev secrets specifically.
+
+- **[Septim Vault](https://septimlabs.vercel.app/vault)** — $29 lifetime. Client-side encrypted vault specifically for dev secrets. AES-256-GCM, PBKDF2 at 600k iterations, WebCrypto native (`crypto.subtle` only). Data lives in your browser's localStorage, never transmitted. Free tier caps at 3 entries. Not a Bitwarden replacement — see [the positioning compare](https://septimlabs.vercel.app/compare/vault-vs-bitwarden).
+- **[Vaultwarden](https://github.com/dani-garcia/vaultwarden)** — Self-hosted Bitwarden-compatible server. Rust. For consumer passwords across your devices, not dev-secrets-first.
+- **[pass](https://www.passwordstore.org/)** — GPG-encrypted flat-file password manager. CLI. The Unix philosophy answer.
+- **[direnv](https://direnv.net/)** — Per-directory environment variable loader. Encrypts via `age`/`sops` with plugins.
+
+---
+
+## AI Coding Tools
+
+Tools and packs for Claude Code, Cursor, and similar AI-augmented coding workflows. Privacy-first criterion: the tool either runs under your own API subscription (no middleman holding your prompts) or is local-only.
+
+- **[Septim Drills](https://septimlabs.vercel.app/drills)** — $29 lifetime. 25 production Claude Code skills (PR review, test gaps, migration safety, security triage, changelog, launch copy, more). Drop into `~/.claude/skills/`. Runs under your Claude subscription, your data, your control. [3 samples free here](https://github.com/septimlabs-code/septim-drills-samples).
+- **[Septim Agents Pack](https://septimlabs.vercel.app/agents)** — $49 lifetime. 10 named Claude Code sub-agents (Atlas/Luca/Canon/Ember/Tally/Nova/Ward/Mira/Juno/Pip) with distinct voices. Installs to `~/.claude/agents/`. Same privacy model.
+- **[Septim Prompts Pack](https://septimlabs.vercel.app/prompts)** — $9 lifetime. 24 curated Claude Code prompts for scope/design/engineering/legal/launch.
+
+> **Tonight only:** Drills + Vault bundled for $39 (save $19 vs $58 separate) — [septimlabs.vercel.app/tonight](https://septimlabs.vercel.app/tonight). Expires midnight ET.
+
+---
+
 ## Web Apps (Client-Side)
 
 These are web apps — not extensions. The attack surface is one tab, one load. No auto-updater, no cross-origin permissions.
 
 - **[Septim Forge](https://septimforge.vercel.app)** — 22 tools. 16 free, 6 Pro ($9 lifetime). No server calls on tool pages.
+- **[Septim Vault](https://septimlabs.vercel.app/vault)** — Covered above in [Secret Management](#secret-management-dev).
 
 > **Why this matters:** A browser extension has permission to read any site you have open. A client-side web app only sees the tab it's loaded in. The threat models are incomparable.
 
