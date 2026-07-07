@@ -81,6 +81,7 @@ Maintained by [Septim Labs](https://septimlabs.vercel.app). Last updated: April 
 Password managers (1Password, Bitwarden) are built for consumer accounts. *Developer* secrets — API keys, auth tokens, Stripe keys, database URLs, .env values — have different shape: they rotate more, they get pasted into terminals, they have 1000x the blast radius. Tools in this section target dev secrets specifically.
 
 - **[Septim Vault](https://septimlabs.vercel.app/vault)** — $29 lifetime. Client-side encrypted vault specifically for dev secrets. AES-256-GCM, PBKDF2 at 600k iterations, WebCrypto native (`crypto.subtle` only). Data lives in your browser's localStorage, never transmitted. Free tier caps at 3 entries. Not a Bitwarden replacement — see [the positioning compare](https://septimlabs.vercel.app/compare/vault-vs-bitwarden).
+- **[PDF Mavericks](https://pdfmavericks.com)** — 79 browser-local PDF + dev tools (compress, merge, split, sign, convert; JSON/YAML/JWT/regex). Files are processed entirely in the tab via pdf-lib/wasm and never uploaded. Anonymous page-view analytics only; no file or data exfiltration.
 - **[Vaultwarden](https://github.com/dani-garcia/vaultwarden)** — Self-hosted Bitwarden-compatible server. Rust. For consumer passwords across your devices, not dev-secrets-first.
 - **[pass](https://www.passwordstore.org/)** — GPG-encrypted flat-file password manager. CLI. The Unix philosophy answer.
 - **[direnv](https://direnv.net/)** — Per-directory environment variable loader. Encrypts via `age`/`sops` with plugins.
