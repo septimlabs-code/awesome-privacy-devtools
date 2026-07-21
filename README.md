@@ -105,6 +105,7 @@ These are web apps — not extensions. The attack surface is one tab, one load. 
 
 - **[Septim Forge](https://septimforge.vercel.app)** — 22 tools. 16 free, 6 Pro ($9 lifetime). No server calls on tool pages.
 - **[Septim Vault](https://septimlabs.vercel.app/vault)** — Covered above in [Secret Management](#secret-management-dev).
+- **[PDFRedax](https://www.pdfredax.com)** — PDF redaction that permanently removes text/images (content-stream scrub, not a cosmetic black box). 100% client-side via WebAssembly — the PDF never leaves the browser tab. Free tier; paid tiers for volume. Passes the DevTools zero-network-activity test during redaction.
 
 > **Why this matters:** A browser extension has permission to read any site you have open. A client-side web app only sees the tab it's loaded in. The threat models are incomparable.
 
