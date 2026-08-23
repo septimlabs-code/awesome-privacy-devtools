@@ -105,6 +105,7 @@ These are web apps — not extensions. The attack surface is one tab, one load. 
 
 - **[Septim Forge](https://septimforge.vercel.app)** — 22 tools. 16 free, 6 Pro ($9 lifetime). No server calls on tool pages.
 - **[Septim Vault](https://septimlabs.vercel.app/vault)** — Covered above in [Secret Management](#secret-management-dev).
+- **[Drop](https://drop.calcont.in)** — 30+ file tools, free. PDF (merge, split, compress, unlock, protect), image, OCR, video, and JSON/YAML/CSV converters. All client-side; no server calls on tool operations.
 
 > **Why this matters:** A browser extension has permission to read any site you have open. A client-side web app only sees the tab it's loaded in. The threat models are incomparable.
 
