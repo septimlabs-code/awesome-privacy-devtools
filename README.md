@@ -102,7 +102,7 @@ Tools and packs for Claude Code, Cursor, and similar AI-augmented coding workflo
 ## Web Apps (Client-Side)
 
 These are web apps — not extensions. The attack surface is one tab, one load. No auto-updater, no cross-origin permissions.
-
+- [OpenAnyDoc](https://www.openanydoc.com) - Viewer and editor for CSV, Excel, JSON and TXT that never uploads a file; no analytics, no cookies, CSP-enforced. (MIT).
 - **[Septim Forge](https://septimforge.vercel.app)** — 22 tools. 16 free, 6 Pro ($9 lifetime). No server calls on tool pages.
 - **[Septim Vault](https://septimlabs.vercel.app/vault)** — Covered above in [Secret Management](#secret-management-dev).
 
