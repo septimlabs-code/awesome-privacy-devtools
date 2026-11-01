@@ -51,6 +51,7 @@ Maintained by [Septim Labs](https://septimlabs.vercel.app). Last updated: April 
 
 ### Diff Checker
 
+- **[Everyday Toolkits Diff Checker](https://everyday-toolkits.vercel.app/tools/diff-checker)** - Free & 100% client-side. Side-by-side (split) and unified Myers-LCS code diffing, token-level highlighting, and Git patch export.
 - **[Septim Forge Pro — Diff Checker](https://septimforge.vercel.app/tools/diff-checker)** — $9 lifetime. Side-by-side, word-level, line-level. Client-side.
 
 ### SQL Formatter
